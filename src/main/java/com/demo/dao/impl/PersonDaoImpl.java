@@ -1,6 +1,6 @@
 package com.demo.dao.impl;
 
-import com.demo.dao.IPersonSpringDao;
+import com.demo.dao.IPersonDao;
 import com.demo.entities.Person;
 import com.demo.entities.Person_;
 import org.springframework.stereotype.Repository;
@@ -9,7 +9,7 @@ import javax.persistence.TypedQuery;
 import javax.persistence.criteria.*;
 
 @Repository
-public class PersonDaoImpl extends AbstractGenericDaoImpl<Person, Integer> implements IPersonSpringDao {
+public class PersonDaoImpl extends AbstractGenericDaoImpl<Person, Integer> implements IPersonDao {
 
     public PersonDaoImpl() {
         super(Person.class);

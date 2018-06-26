@@ -1,6 +1,7 @@
 package com.demo;
 
-import com.demo.dao.IPersonSpringDao;
+import com.demo.business.IPersonManager;
+import com.demo.dao.IPersonDao;
 import com.demo.dao.impl.AbstractGenericDaoImpl;
 import com.demo.entities.Person;
 import org.slf4j.Logger;
@@ -18,7 +19,7 @@ public class Main {
     private static final Logger LOGGER = LoggerFactory.getLogger(AbstractGenericDaoImpl.class.getName());
 
     @Autowired
-    private IPersonSpringDao criteriaDao;
+    private IPersonManager manager;
 
 
     public static void main(final String[] args) {
@@ -32,10 +33,10 @@ public class Main {
     public void start() {
         final Person person1 = new Person();
         person1.setName("Beautiful name!");
-        this.criteriaDao.create(person1);
-        Person read = this.criteriaDao.read(person1.getId());
+        this.manager.create(person1);
+        Person read = this.manager.read(person1.getId());
         LOGGER.info(read.toString());
-        LOGGER.info(this.criteriaDao.findByName("Beautiful").toString());
+        LOGGER.info(this.manager.findByName("Beautiful").toString());
     }
 
 

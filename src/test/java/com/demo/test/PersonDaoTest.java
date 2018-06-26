@@ -1,8 +1,8 @@
 package com.demo.test;
 
 
-import com.demo.conf.TestSpringJpaConf;
-import com.demo.dao.IPersonSpringDao;
+import com.demo.dao.conf.TestSpringJpaConf;
+import com.demo.dao.IPersonDao;
 import com.demo.entities.Person;
 import org.junit.Before;
 import org.junit.Test;
@@ -33,7 +33,7 @@ public class PersonDaoTest extends AbstractTransactionalJUnit4SpringContextTests
 
     @Autowired
     @Qualifier("personDaoImpl")
-    IPersonSpringDao dao;
+    IPersonDao dao;
 
 
     @Before

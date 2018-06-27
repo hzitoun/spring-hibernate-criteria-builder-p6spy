@@ -12,7 +12,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class PersonManagerImpl extends AbstractGenericManagerImpl<Person, Integer> implements IPersonManager {
 
-    private final IPersonDao personDao;
+
+    private IPersonDao personDao;
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AbstractGenericManagerImpl.class);
 
@@ -22,13 +23,15 @@ public class PersonManagerImpl extends AbstractGenericManagerImpl<Person, Intege
     }
 
     @Override
-    protected IGenericDao<Person, Integer> getDao() {
+    public IGenericDao<Person, Integer> getDao() {
         return this.personDao;
     }
+
 
     @Override
     public Person findByName(String name) {
         LOGGER.info(this.getBusinessMessage("info.read.person.by.name"));
         return this.personDao.findByName(name);
     }
+
 }

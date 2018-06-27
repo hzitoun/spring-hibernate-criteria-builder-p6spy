@@ -2,7 +2,6 @@ package com.demo.dao.conf;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -24,7 +23,6 @@ public class TestSpringJpaConf extends SpringJPAConfig {
 
     @Bean
     @Autowired
-    @Lazy
     public JpaTransactionManager transactionManager(final EntityManagerFactory entityManagerFactory) {
         final JpaTransactionManager txManager = new JpaTransactionManager();
         txManager.setEntityManagerFactory(entityManagerFactory);

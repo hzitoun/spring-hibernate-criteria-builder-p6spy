@@ -19,7 +19,7 @@ public abstract class AbstractGenericManagerImpl<ENTITY, PK> implements IGeneric
 
     @Override
     @Transactional(readOnly = true)
-    public ENTITY read(PK id) {
+    public ENTITY read(PK id) throws IllegalArgumentException {
         LOGGER.info("read by id" + id);
         return this.getDao().read(id);
     }

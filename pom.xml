@@ -91,7 +91,6 @@
             <scope>provided</scope>
         </dependency>
 
-
         <!--for tests-->
         <dependency>
             <groupId>org.mockito</groupId>

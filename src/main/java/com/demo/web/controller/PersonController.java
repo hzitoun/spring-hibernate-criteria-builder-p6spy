@@ -9,12 +9,15 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/person", produces = "application/json")
 public class PersonController {
 
-    private final IPersonManager manager;
-
     @Autowired
-    public PersonController(IPersonManager manager) {
-        this.manager = manager;
+    private IPersonManager manager;
+
+
+    @GetMapping("/hello")
+    public String test(){
+        return "hello";
     }
+
 
     @PostMapping("/create")
     public Person create(@RequestBody Person person) {
@@ -26,5 +29,4 @@ public class PersonController {
     public Person read(@RequestParam Integer personId) {
         return this.manager.read(personId);
     }
-
 }

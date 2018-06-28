@@ -28,14 +28,13 @@ public class Main {
         p.start();
     }
 
-    //we need a transaction for our EntityManager to work
-    @Transactional
+ 
     public void start() {
-        final Person person1 = new Person();
-        person1.setName("Beautiful name!");
-        this.manager.create(person1);
-        Person read = this.manager.read(person1.getId());
-        LOGGER.info(read.toString());
+        final Person person = new Person();
+        person.setName("Beautiful name!");
+        this.manager.create(person);
+        Person loadedPerson = this.manager.read(person.getId());
+        LOGGER.info(loadedPerson.toString());
         LOGGER.info(this.manager.findByName("Beautiful").toString());
     }
 

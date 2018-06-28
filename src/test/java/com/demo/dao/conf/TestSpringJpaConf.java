@@ -1,7 +1,7 @@
 package com.demo.dao.conf;
 
 import org.springframework.beans.factory.annotation.Autowired;
-org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;

@@ -1,0 +1,10 @@
+sudo: false
+
+language: java
+jdk:
+  - oraclejdk8
+
+
+script:
+  # clean install
+  - mvn clean install -B -Dintegration_test_settings=`pwd`/test/travis-ci/components-persistence-mysql.properties

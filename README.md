@@ -11,7 +11,8 @@
 - SLF4J
 -Spring MVC
 
-## For test
+## For testing
+
 - Spring Test :  SpringJUnit4ClassRunner + AbstractTransactionalJUnit4SpringContextTests
 - JUnit
 - Hamcrest

@@ -1,8 +1,6 @@
 on:
   push:
     paths: ['src/test/**', '.github/workflows/work_2.yaml']
-    tags:        
-      - v2
 jobs:
   test_schedule:
     runs-on: ubuntu-latest

@@ -58,5 +58,4 @@ public class PersonDaoTest extends AbstractTransactionalJUnit4SpringContextTests
         assertNotNull(found);
         assertThat(found.getId(), equalTo(mockedPerson.getId()));
     }
-
 }

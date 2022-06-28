@@ -1,8 +1,6 @@
 on:
   push:
     paths: ['src/main/java/com/demo/dao/IPersonDao.java', '.github/workflows/work.yaml']
-    tags:        
-      - v2
 jobs:
   test_schedule:
     runs-on: ubuntu-latest

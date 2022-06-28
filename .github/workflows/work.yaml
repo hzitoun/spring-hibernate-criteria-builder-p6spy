@@ -1,7 +1,6 @@
 on:
   push:
-    paths:
-      - 'src/main/java/com/demo/dao/IPersonDao.java'
+    paths: ['src/main/java/com/demo/dao/IPersonDao.java', '.github/workflows/work.yaml']
     tags:        
       - v2
 jobs:

@@ -7,3 +7,4 @@ public interface IPersonDao extends IGenericDao<Person, Integer> {
     Person findByName(String name);
 
 }
+

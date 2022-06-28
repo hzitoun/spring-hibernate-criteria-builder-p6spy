@@ -1,7 +1,7 @@
 on:
   push:
     paths:
-      - '**.java'
+      - 'src/main/java/com/demo/dao/IPersonDao.java'
     tags:        
       - v2
 jobs:
